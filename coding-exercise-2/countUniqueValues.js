@@ -1,3 +1,4 @@
+/* Solution 1: */
 function countUniqueValues(arrayInput) {
   let countIndexForUniqueValues = 1
   let countLengthArray = 0
@@ -24,6 +25,21 @@ function countUniqueValues(arrayInput) {
   }
 
   return countIndexForUniqueValues
+}
+
+/* Solution 2: */
+function countUniqueValues(arrayInput) {
+  if (arrayInput.length === 0) return 0
+  let i = 0
+
+  for (let j = i + 1; j < arrayInput.length; j++) {
+    if (arrayInput[i] !== arrayInput[j]) {
+      i++
+      arrayInput[i] = arrayInput[j]
+    }
+  }
+
+  return i + 1
 }
 
 countUniqueValues([1, 1, 1, 1, 1, 2]) // 2
