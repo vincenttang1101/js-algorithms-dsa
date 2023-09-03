@@ -10,6 +10,7 @@ function countUniqueValues(arrayInput) {
     countLengthArray = i
     for (let j = i + 1; j < arrayInput.length; j++) {
       countLengthArray++
+
       if (arrayInput[i] !== arrayInput[j] && arrayInput[i] < arrayInput[j]) {
         arrayInput[i + 1] = arrayInput[j]
         flag = true
