@@ -13,7 +13,7 @@ function areThereDuplicates() {
 }
 */
 
-/* Solution 2: */
+/* Solution 2: 
 function areThereDuplicates(...args) {
   // Two pointers
   args.sort()
@@ -28,6 +28,12 @@ function areThereDuplicates(...args) {
     next++
   }
   return false
+}
+*/
+
+/* Solution 3: */
+function areThereDuplicates() {
+  return new Set(arguments).size !== arguments.length
 }
 
 areThereDuplicates(1, 2, 3) // false
