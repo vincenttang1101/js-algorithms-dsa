@@ -15,4 +15,4 @@ function bubbleSort(arr) {
   return arr
 }
 
-bubbleSort([4, 9, 2, 5, 3])
+bubbleSort([4, 9, 2, 5, 6])
