@@ -6,7 +6,6 @@ function binarySearch(arr, target) {
   while (arr[middleIdx] !== target && startIdx <= endIdx) {
     if (arr[middleIdx] < target) startIdx = middleIdx + 1
     else endIdx = middleIdx - 1
-
     middleIdx = Math.floor((startIdx + endIdx) / 2)
   }
   return arr[middleIdx] === target ? middleIdx : -1
